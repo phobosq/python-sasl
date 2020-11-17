@@ -19,7 +19,13 @@
 
 #include <stdint.h>
 #include <string>
+
+#ifdef _WIN32
+#include <sasl\sasl.h>
+#else
 #include <sasl/sasl.h>
+#endif
+
 #include <sstream>
 #include <stdlib.h>
 #include <string.h>
